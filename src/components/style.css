@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #004d40;
+}
+.Header {
+  padding: 20px 0px;
+  text-align: center;
+}
+.HeaderTitle {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 33px;
+}
+.HeaderTitle a {
+  color: #004d40;
+  text-decoration: none;
+}
+.HeaderSubTitle {
+  font-weight: 300;
+  font-size: 14px;
+}
+.Information {
+  text-align: center;
+}
+.AlertInformation {
+  width: 100%;
+  max-width: 310px;
+  font-size: 13px;
+  text-align: center;
+  display: inline-block;
+}
+.ModalInformation .modal-title {
+  font-size: 19px;
+}
+.ModalInformation .modal-body {
+  font-size: 14px;
+  font-weight: 300;
+}
+.ModalInformation .modal-body h3 {
+  font-size: 16px;
+  margin: 10px 0 3px 0;
+}
+.ModalInformation .modal-footer {
+  font-size: 12px;
+}
+.Information a {
+  display: block;
+  margin: 10px auto;
+  font-size: 13px;
+  color: #004d40;
+  text-decoration: underline;
+}
+.Information a:focus,
+.Information a:hover {
+  outline: 0;
+  color: #004d40;
+}
+.Candlestick {
+  width: 100%;
+  font-size: 12px
+}
+.CandlestickChart {
+  width: 100%;
+}
+.SortData {
+  text-align: center;
+  margin: 10px 0px 30px 0;
+}
+.SortData button {
+  margin: 2.5px 5px;
+}
+.CardDetails {
+  text-align: center;
+  margin: 5px;
+}
+.CardDetails a {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 13px;
+}
+.CardInterval {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.AppDonation {
+  width: 120px !important;
+  border-radius: 5px;
+}
+footer {
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* ----------------------- */
+/* ------- Mobile -------- */
+/* ----------------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+/* Extra large devices (large desktops, 1200px and down) */
+@media (max-width: 1200px) {
+
+}
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+
+}
+/* Medium devices (tablets, 768px and down) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {
+
+}
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+  .AlertLastUpdate {
+    max-width: 100%;
+  }
+}

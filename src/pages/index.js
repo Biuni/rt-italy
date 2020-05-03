@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Row, Button } from "react-bootstrap"
+import { Row } from "react-bootstrap"
 import _ from "lodash"
 
 import Information from "../components/Information"
@@ -43,7 +43,7 @@ export default () => (
     query={graphql`
       query AllValue {
         allRtCsv(
-          filter: { date: { gt: "2020-05-02" } }
+          filter: { date: { gt: "2020-05-03" } }
           sort: { fields: ML, order: DESC }
         ) {
           totalCount

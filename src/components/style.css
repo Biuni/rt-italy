@@ -59,6 +59,13 @@ body {
   outline: 0;
   color: #004d40;
 }
+.Candlestick {
+  width: 100%;
+  font-size: 12px
+}
+.CandlestickChart {
+  width: 100%;
+}
 .SortData {
   text-align: center;
   margin: 10px 0px 30px 0;

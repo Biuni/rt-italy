@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql } from "gatsby"
-
-import Layout from "../components/Layout"
-import CandleStickGraph from "../components/CandleStickGraph"
-import SEO from "../components/SEO"
-
 import { Row, Button } from "react-bootstrap"
-
 import _ from "lodash"
 
 import Information from "../components/Information"
 import RegionDetails from "../components/RegionDetails"
 import Sort from "../components/Sort"
+import Layout from "../components/Layout"
+import CandleStickGraph from "../components/CandleStickGraph"
+import SEO from "../components/SEO"
 
 function IndexPage(values) {
   const [data, setData] = useState(values.data.allRtCsv.edges)

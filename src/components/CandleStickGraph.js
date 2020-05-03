@@ -43,11 +43,8 @@ function CandleStickGraph(props) {
   }
 
   return (
-    <div
-      className="candlestick-example"
-      style={{ width: "100%", fontSize: "12px" }}
-    >
-      <div className="chart" style={{ width: "100%" }}>
+    <div className="Candlestick">
+      <div className="CandlestickChart">
         <FlexibleWidthXYPlot
           animation
           yDomain={[0, 2.5]}

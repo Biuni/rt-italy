@@ -35,7 +35,10 @@ function Information(props) {
           <br />
           <ul>
             <li>
-              <strong>R<sub>t</sub></strong>: rappresentato dal puntino nero.
+              <strong>
+                R<sub>t</sub>
+              </strong>
+              : rappresentato dal puntino nero.
             </li>
             <li>
               <strong>Intervallo del 50%</strong>: rappresentato dalla "candela"
@@ -78,7 +81,7 @@ function Information(props) {
           provincia.
         </Modal.Body>
         <Modal.Footer>
-          <a href="https://github.com/Biuni">
+          <a href="https://github.com/Biuni/rt-italy/issues">
             Segnala eventuali problemi o bug.
           </a>
         </Modal.Footer>

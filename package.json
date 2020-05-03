@@ -1,10 +1,13 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "rt-italy",
+  "description": "Numero effettivo di riproduzione del virus in Italia.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gianluca Bonifazi <info@biuni.it>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "bootstrap": "^4.4.1",
     "gatsby": "^2.21.0",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-manifest": "^2.4.0",
@@ -12,17 +15,24 @@
     "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-transformer-csv": "^2.3.0",
     "gatsby-transformer-sharp": "^2.5.0",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-vis": "^1.11.7"
   },
   "devDependencies": {
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "coronavirus",
+    "covid19",
+    "visualization",
+    "data"
   ],
   "license": "MIT",
   "scripts": {
@@ -31,14 +41,13 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Biuni/rt-italy"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Biuni/rt-italy/issues"
   }
 }

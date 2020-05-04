@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Row } from "react-bootstrap"
 import _ from "lodash"
 
+import Loader from "../components/Loader"
 import Information from "../components/Information"
 import RegionDetails from "../components/RegionDetails"
 import Sort from "../components/Sort"
@@ -12,28 +13,41 @@ import SEO from "../components/SEO"
 
 function IndexPage(values) {
   const [data, setData] = useState(values.data.allRtCsv.edges)
+  const [isLoaded, setIsLoaded] = useState(true)
 
   const sortData = (data, key) => {
     const sortedData = _.orderBy(data, `node.${key}`, "desc")
     setData(sortedData)
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(false)
+    }, 1000)
+  }, [])
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Information last={data[0].node.date} />
-      <CandleStickGraph
-        values={data}
-        max={data[0].node.state}
-        min={data.slice(-1)[0].node.state}
-      />
-      <Sort sortData={sortData} values={data} />
-      <Row>
-        {data.length > 0 &&
-          data.map(region => (
-            <RegionDetails region={region} key={region.node.id} />
-          ))}
-      </Row>
+      {isLoaded ? (
+        <Loader />
+      ) : (
+        <>
+          <Information last={data[0].node.date} />
+          <CandleStickGraph
+            values={data}
+            max={data[0].node.state}
+            min={data.slice(-1)[0].node.state}
+          />
+          <Sort sortData={sortData} values={data} />
+          <Row>
+            {data.length > 0 &&
+              data.map(region => (
+                <RegionDetails region={region} key={region.node.id} />
+              ))}
+          </Row>
+        </>
+      )}
     </Layout>
   )
 }

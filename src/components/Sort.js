@@ -1,6 +1,4 @@
-import PropTypes from "prop-types"
 import React from "react"
-
 import { Button } from "react-bootstrap"
 
 function Sort(props) {
@@ -24,23 +22,9 @@ function Sort(props) {
       <Button
         size="sm"
         variant="outline-info"
-        onClick={() => props.sortData(props.values, "Low_90")}
-      >
-        Min 90%
-      </Button>
-      <Button
-        size="sm"
-        variant="outline-info"
         onClick={() => props.sortData(props.values, "High_50")}
       >
         Max 50%
-      </Button>
-      <Button
-        size="sm"
-        variant="outline-info"
-        onClick={() => props.sortData(props.values, "Low_50")}
-      >
-        Min 50%
       </Button>
     </div>
   )

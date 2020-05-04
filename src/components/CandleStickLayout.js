@@ -45,7 +45,9 @@ class CandlestickSeries extends AbstractSeries {
               key={i}
               onClick={e => this._valueClickHandler(d, e)}
               onMouseOver={e => this._valueMouseOverHandler(d, e)}
+              onFocus={e => this._valueMouseOverHandler(d, e)}
               onMouseOut={e => this._valueMouseOutHandler(d, e)}
+              onBlur={e => this._valueMouseOutHandler(d, e)}
             >
               <line
                 x1={-xWidth}

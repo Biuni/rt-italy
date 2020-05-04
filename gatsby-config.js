@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `🇮🇹 Rₜ COVID-19 Italia`,
+    title: `Rₜ COVID-19 Italia`,
     description: `Numero effettivo di riproduzione del virus in Italia.`,
     author: `@BiuniGianluca`,
+    twitterImage: `images/tw_share.jpg`,
+    facebookImage: `images/fb_share.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

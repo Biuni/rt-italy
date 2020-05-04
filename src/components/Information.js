@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Alert, Button, Modal } from "react-bootstrap"
+import { Alert, Modal, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons"
 
@@ -15,9 +15,14 @@ function Information(props) {
         Ultimo aggiornamento: <strong>{props.last}</strong>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" />
       </Alert>
-      <a href="#" onClick={handleShow}>
+      <Button
+        className="ButtonInformation"
+        variant="outline-info"
+        size="sm"
+        onClick={handleShow}
+      >
         Maggiori informazioni
-      </a>
+      </Button>
 
       <Modal show={show} onHide={handleClose} className="ModalInformation">
         <Modal.Header closeButton>
@@ -25,13 +30,12 @@ function Information(props) {
         </Modal.Header>
         <Modal.Body>
           <h3>Come leggere i dati</h3>
-          Lo scopo dei dati presenti in questa pagina è quello di stimare il
-          valore di R<sub>t</sub> di ogni regione, attraverso un metodo
-          statistico. A tal proposito, oltre all'effettivo numero di
-          riproduzione del virus, sono considerati due intervalli di
-          credibilità: uno del 50% ed uno del 90%. Ad ognuno di questi
-          intervalli è associato un valore massimo ed un valore minimo. Nel
-          grafico avremo quindi:
+          Lo scopo di questo progetto è quello di stimare l'attuale valore di R
+          <sub>t</sub> di ogni regione, attraverso un metodo statistico. A tal
+          proposito, oltre all'effettivo numero di riproduzione del virus, sono
+          considerati due intervalli di credibilità: uno del 50% ed uno del 90%.
+          Ad ognuno di questi intervalli è associato un valore massimo ed un
+          valore minimo. Nel grafico avremo quindi:
           <br />
           <ul>
             <li>
@@ -66,19 +70,17 @@ function Information(props) {
           <a href="http://systrom.com/blog/the-metric-we-need-to-manage-covid-19/">
             blog
           </a>
-          .<h3>Aggiornamento quotidiano</h3>I dati, che sfruttano il dataset
-          della Protezione Civile, vengono calcolati ed aggiornati
-          quotidianamente alle ore 18:30 circa.
+          .<h3>Aggiornamento quotidiano</h3>Il valore di R<sub>t</sub> (ed i
+          rispettivi intervalli di credibilità) vengono aggiornati ogni giorno
+          alle 18:30 circa.
           <h3>Disclaimer</h3>
-          I dati presenti in questa pagina sono stati elaborati tramite metodi
-          statistici. Non sono inoltre consideraribili ufficiali in quanto non
-          rilasciati da nessun ente qualificato.
+          I dati presenti in questa pagina non sono consideraribili ufficiali in
+          quanto non rilasciati da nessun ente qualificato.
           <br />
-          Questo sito web è ispirato a <a href="https://rt.live/">Rt live</a>.
-          <h3>Prossimi aggiornamenti</h3>
-          Arriverà a breve anche la possibilità di vedere l'andamento storico di
-          ogni regione ed il valore di R<sub>t</sub> calcolato per ogni
-          provincia.
+          Questo sito web è ispirato a <a href="https://rt.live/">rt.live</a>.
+          <h3>Next step...</h3>
+          Arriverà a breve la possibilità di vedere l'andamento storico di ogni
+          regione ed il valore di R<sub>t</sub> calcolato per ogni provincia.
         </Modal.Body>
         <Modal.Footer>
           <a href="https://github.com/Biuni/rt-italy/issues">

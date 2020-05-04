@@ -1,12 +1,12 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faBolt } from "@fortawesome/free-solid-svg-icons"
 
 function Footer() {
   return (
     <footer>
-      Creato con <FontAwesomeIcon icon={faHeart} color="#eb5569" /> da{" "}
-      <a href="https://biuni.it">Biuni</a>
+      Creato da <a href="https://biuni.it">Biuni</a>{" "}
+      <FontAwesomeIcon icon={faBolt} color="#DAA520" />
       <br />
       <small>
         Dati della{" "}

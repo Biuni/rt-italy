@@ -15,6 +15,13 @@ body {
   vertical-align: middle;
   font-size: 33px;
 }
+.HeaderTitle img {
+  max-width: 32px;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
 .HeaderTitle a {
   color: #004d40;
   text-decoration: none;
@@ -23,8 +30,18 @@ body {
   font-weight: 300;
   font-size: 14px;
 }
+.AppLoader {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 2.5;
+}
 .Information {
   text-align: center;
+}
+.ButtonInformation {
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
 }
 .AlertInformation {
   width: 100%;

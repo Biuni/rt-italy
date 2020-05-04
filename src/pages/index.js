@@ -11,6 +11,11 @@ import Layout from "../components/Layout"
 import CandleStickGraph from "../components/CandleStickGraph"
 import SEO from "../components/SEO"
 
+// Fix huge icon flash
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+config.autoAddCss = false
+
 function IndexPage(values) {
   const [data, setData] = useState(values.data.allRtCsv.edges)
   const [isLoaded, setIsLoaded] = useState(true)

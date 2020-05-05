@@ -27,9 +27,10 @@ function IndexPage(values) {
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoaded(false)
     }, 1000)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -64,7 +65,7 @@ export default () => (
     query={graphql`
       query AllValue {
         allRtCsv(
-          filter: { date: { gt: "2020-05-04" } },
+          filter: { date: { gt: "2020-05-05" } },
           sort: { fields: ML, order: DESC }
         ) {
           totalCount

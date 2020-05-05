@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Rₜ COVID-19 Italia`,
-    description: `Numero effettivo di riproduzione del virus in Italia.`,
+    description: `Attuale numero effettivo di riproduzione del virus (Rt) di ogni regione italiana.`,
     author: `@BiuniGianluca`,
     url: `https://rt-italy.live`,
   },

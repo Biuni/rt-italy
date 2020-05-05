@@ -41,7 +41,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: `Rₜ COVID-19 Italia | ${title}`,
+          content: `Rt COVID-19 Italia | ${title}`,
         },
         {
           property: `og:description`,
@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -65,7 +65,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: `Rₜ COVID-19 Italia | ${title}`,
+          content: `Rt COVID-19 Italia | ${title}`,
         },
         {
           name: `twitter:description`,

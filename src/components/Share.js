@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react"
 import {
-  FacebookShareButton, FacebookIcon,
-  TelegramShareButton, TelegramIcon,
-  TwitterShareButton, TwitterIcon,
-  WhatsappShareButton, WhatsappIcon
-} from 'react-share';
+  FacebookShareButton,
+  FacebookIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share"
 
 function Share(props) {
   return (
@@ -32,7 +36,7 @@ function Share(props) {
         </li>
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Share;
+export default Share

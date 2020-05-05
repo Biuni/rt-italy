@@ -44,7 +44,6 @@ function IndexPage(values) {
             values={data}
             first={data[0].node.state}
             last={data.slice(-1)[0].node.state}
-            upper={parseFloat(_.maxBy(data, 'node.High_90').node.High_90) + 0.5}
           />
           <Share />
           <Sort sortData={sortData} values={data} />

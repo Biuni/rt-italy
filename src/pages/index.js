@@ -6,6 +6,7 @@ import _ from "lodash"
 import Loader from "../components/Loader"
 import Information from "../components/Information"
 import RegionDetails from "../components/RegionDetails"
+import Share from "../components/Share"
 import Sort from "../components/Sort"
 import Layout from "../components/Layout"
 import CandleStickGraph from "../components/CandleStickGraph"
@@ -41,9 +42,11 @@ function IndexPage(values) {
           <Information last={data[0].node.date} />
           <CandleStickGraph
             values={data}
-            max={data[0].node.state}
-            min={data.slice(-1)[0].node.state}
+            first={data[0].node.state}
+            last={data.slice(-1)[0].node.state}
+            upper={parseFloat(_.maxBy(data, 'node.High_90').node.High_90) + 0.5}
           />
+          <Share />
           <Sort sortData={sortData} values={data} />
           <Row>
             {data.length > 0 &&

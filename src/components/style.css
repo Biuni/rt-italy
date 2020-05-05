@@ -76,6 +76,17 @@ body {
   outline: 0;
   color: #004d40;
 }
+.Share {
+  text-align: center;
+}
+.Share ul {
+  margin-top: 25px;
+  text-align: center;
+}
+.Share ul li {
+  display: inline;
+  margin: 2px;
+}
 .Candlestick {
   width: 100%;
   font-size: 12px

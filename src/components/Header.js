@@ -10,7 +10,7 @@ function Header(props) {
       <h1 className="HeaderTitle">
         <Link to="/">
           <img src={ItalyFlag} alt="Italia" title={props.siteTitle} />
-          {props.siteTitle}
+          <span dangerouslySetInnerHTML={{ __html: props.siteTitle }} />
         </Link>
       </h1>
       <h3 className="HeaderSubTitle">

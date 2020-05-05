@@ -8,23 +8,30 @@ function Sort(props) {
       <Button
         size="sm"
         variant="outline-info"
-        onClick={() => props.sortData(props.values, "ML")}
+        onClick={() => props.sortData(props.values, "ML", "desc")}
       >
         R<sub>t</sub>
       </Button>
       <Button
         size="sm"
         variant="outline-info"
-        onClick={() => props.sortData(props.values, "High_90")}
+        onClick={() => props.sortData(props.values, "High_90", "desc")}
       >
         Max 90%
       </Button>
       <Button
         size="sm"
         variant="outline-info"
-        onClick={() => props.sortData(props.values, "High_50")}
+        onClick={() => props.sortData(props.values, "High_50", "desc")}
       >
         Max 50%
+      </Button>
+      <Button
+        size="sm"
+        variant="outline-info"
+        onClick={() => props.sortData(props.values, "state", "asc")}
+      >
+        A-Z
       </Button>
     </div>
   )

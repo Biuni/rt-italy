@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      titleTemplate={`Rt COVID-19 Italia | %s`}
       meta={[
         {
           name: `description`,

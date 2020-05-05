@@ -21,8 +21,8 @@ function IndexPage(values) {
   const [data, setData] = useState(values.data.allRtCsv.edges)
   const [isLoaded, setIsLoaded] = useState(true)
 
-  const sortData = (data, key) => {
-    const sortedData = _.orderBy(data, `node.${key}`, "desc")
+  const sortData = (data, key, direction) => {
+    const sortedData = _.orderBy(data, `node.${key}`, direction)
     setData(sortedData)
   }
 

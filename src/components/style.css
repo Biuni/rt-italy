@@ -26,6 +26,9 @@ body {
   color: #004d40;
   text-decoration: none;
 }
+.HeaderTitle sub {
+  font-size: 18px;
+}
 .HeaderSubTitle {
   font-weight: 300;
   font-size: 14px;

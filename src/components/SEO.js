@@ -12,6 +12,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            image
+            url
           }
         }
       }
@@ -33,8 +35,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.url,
+        },
+        {
           property: `og:title`,
-          content: title,
+          content: `Rₜ COVID-19 Italia | ${title}`,
         },
         {
           property: `og:description`,
@@ -46,7 +52,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.facebookImage,
+          content: site.siteMetadata.image,
         },
         {
           name: `twitter:card`,
@@ -58,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `Rₜ COVID-19 Italia | ${title}`,
         },
         {
           name: `twitter:description`,
@@ -66,7 +72,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.twitterImage,
+          content: site.siteMetadata.image,
         },
       ].concat(meta)}
     />

@@ -3,8 +3,8 @@ module.exports = {
     title: `Rₜ COVID-19 Italia`,
     description: `Numero effettivo di riproduzione del virus in Italia.`,
     author: `@BiuniGianluca`,
-    twitterImage: `images/tw_share.jpg`,
-    facebookImage: `images/fb_share.jpg`,
+    image: `https://rt-italy.live/images/share.jpg`,
+    url: `https://rt-italy.live`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

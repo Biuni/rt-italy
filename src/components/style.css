@@ -42,16 +42,19 @@ body {
   text-align: center;
 }
 .ButtonInformation {
-  display: block;
   margin: 0 auto;
   font-size: 12px;
+}
+.ButtonInformation.BackHome {
+  margin-right: 8px;
 }
 .AlertInformation {
   width: 100%;
   max-width: 310px;
   font-size: 13px;
   text-align: center;
-  display: inline-block;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 .ModalInformation .modal-title {
   font-size: 19px;
@@ -66,13 +69,6 @@ body {
 }
 .ModalInformation .modal-footer {
   font-size: 12px;
-}
-.Information a {
-  display: block;
-  margin: 10px auto;
-  font-size: 13px;
-  color: #004d40;
-  text-decoration: underline;
 }
 .Information a:focus,
 .Information a:hover {
@@ -129,6 +125,29 @@ footer {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+
+/* ----------------------- */
+/* ---- Details Page ----- */
+/* ----------------------- */
+.RegionDetails {
+  text-align: center;
+  color: #17a2b8;
+}
+.RegionName {
+  font-size: 23px;
+  display: block;
+  margin: 25px auto 10px auto;
+}
+.RegionScrollInfo {
+  font-size: 13px;
+  font-weight: 100;
+  color: #004d40;
+}
+.RegionGraph {
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 /* ----------------------- */

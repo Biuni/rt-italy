@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Row } from "react-bootstrap"
+import slugify from "slugify"
 import _ from "lodash"
 
 import Loader from "../components/Loader"
@@ -18,7 +19,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
 
 function IndexPage(values) {
-  const [data, setData] = useState(values.data.allRtCsv.edges)
+  const [data, setData] = useState()
   const [isLoaded, setIsLoaded] = useState(true)
 
   const sortData = (data, key, direction) => {
@@ -27,11 +28,23 @@ function IndexPage(values) {
   }
 
   useEffect(() => {
+    addSlug(values.data.allRtCsv.edges)
     const timer = setTimeout(() => {
       setIsLoaded(false)
     }, 1000)
     return () => clearTimeout(timer)
-  }, [])
+  }, [values])
+
+  const addSlug = data => {
+    data.map(
+      val =>
+        (val.node["slug"] = slugify(val.node.state, {
+          lower: true,
+          remove: /[*+~.()'"!:@]/g,
+        }))
+    )
+    setData(data)
+  }
 
   return (
     <Layout>
@@ -65,7 +78,7 @@ export default () => (
     query={graphql`
       query AllValue {
         allRtCsv(
-          filter: { date: { gt: "2020-05-05" } },
+          filter: { date: { gt: "2020-05-05" } }
           sort: { fields: ML, order: DESC }
         ) {
           totalCount

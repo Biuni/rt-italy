@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Alert, Modal, Button } from "react-bootstrap"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons"
 
@@ -11,10 +12,22 @@ function Information(props) {
 
   return (
     <div className="Information">
-      <Alert variant={"info"} className="AlertInformation">
-        Ultimo aggiornamento: <strong>{props.last}</strong>&nbsp;&nbsp;
-        <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" />
-      </Alert>
+      {props.last !== "" ? (
+        <Alert variant={"info"} className="AlertInformation">
+          Ultimo aggiornamento: <strong>{props.last}</strong>&nbsp;&nbsp;
+          <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" />
+        </Alert>
+      ) : (
+        <Link to="/">
+          <Button
+            className="ButtonInformation BackHome"
+            variant="outline-info"
+            size="sm"
+          >
+            Torna alla homepage
+          </Button>
+        </Link>
+      )}
       <Button
         className="ButtonInformation"
         variant="outline-info"
@@ -70,7 +83,11 @@ function Information(props) {
           <a href="http://systrom.com/blog/the-metric-we-need-to-manage-covid-19/">
             blog
           </a>
-          .<h3>Aggiornamento quotidiano</h3>Il valore di R<sub>t</sub> (ed i
+          . <br />
+          Per adattarlo ai dati italiani, come consigliato dall'
+          <strong>Istituto Superiore della Sanità</strong>, sono considerati i
+          casi negli ultimi 15 giorni invece che 7, come indicato da Systrom.
+          <h3>Aggiornamento quotidiano</h3>Il valore di R<sub>t</sub> (ed i
           rispettivi intervalli di credibilità) vengono aggiornati ogni giorno
           alle 18:30 circa.
           <h3>Disclaimer</h3>
@@ -78,9 +95,6 @@ function Information(props) {
           quanto non rilasciati da nessun ente qualificato.
           <br />
           Questo sito web è ispirato a <a href="https://rt.live/">rt.live</a>.
-          <h3>Next step...</h3>
-          Arriverà a breve la possibilità di vedere l'andamento storico di ogni
-          regione ed il valore di R<sub>t</sub> calcolato per ogni provincia.
         </Modal.Body>
         <Modal.Footer>
           <a href="https://github.com/Biuni/rt-italy/issues">

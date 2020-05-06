@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import { Card, Col, ListGroup, ListGroupItem } from "react-bootstrap"
 
@@ -49,7 +50,7 @@ function RegionDetails(props) {
               </div>
             </ListGroupItem>
           </ListGroup>
-          {/*<Link to='/'>Vedi Dettagli</Link>*/}
+          <Link to={`regione/${props.region.node.slug}`}>Vedi Dettagli</Link>
         </Card.Body>
       </Card>
     </Col>

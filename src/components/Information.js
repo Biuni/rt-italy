@@ -87,11 +87,8 @@ function Information(props) {
           Per adattarlo ai dati italiani, come consigliato dall'
           <strong>Istituto Superiore della Sanità</strong>, sono considerati i
           casi negli ultimi 15 giorni invece che 7, come indicato da Systrom.
-          <h3>Aggiornamento dei dati</h3>Dal 06-07-2020, il valore di R<sub>t</sub>{" "}
-          (ed i rispettivi intervalli di credibilità) non verranno più aggiornati
-          quotidianamente ma ogni Lunedì. Questa scelta deriva dalla poca variabilità
-          dei casi e dal problema del continuo ricalcolo che le regioni effettuano
-          oramai ogni giorno, rendendo impossibile effettuare una predizione credibile.
+          <h3>Aggiornamento dei dati</h3>Il valore di R<sub>t</sub>{" "}
+          (ed i rispettivi intervalli di credibilità) sono aggiornati settimanalmente.
           <h3>Disclaimer</h3>
           I dati presenti in questa pagina non sono consideraribili ufficiali in
           quanto non rilasciati da nessun ente qualificato.

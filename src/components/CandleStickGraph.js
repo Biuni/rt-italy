@@ -47,7 +47,7 @@ function CandleStickGraph(props) {
       <div className="CandlestickChart">
         <FlexibleWidthXYPlot
           animation
-          yDomain={[0, 2.5]}
+          yDomain={[0, 3.5]}
           height={500}
           xType="ordinal"
           margin={{ bottom: 150 }}
@@ -69,7 +69,6 @@ function CandleStickGraph(props) {
               { x: props.last, y: 1 },
             ]}
             opacity={0.7}
-            style={{ d: 'path("M 0 204 L 200000000000000 204")' }}
           />
         </FlexibleWidthXYPlot>
       </div>

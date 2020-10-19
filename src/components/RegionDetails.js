@@ -50,7 +50,7 @@ function RegionDetails(props) {
               </div>
             </ListGroupItem>
           </ListGroup>
-          {/*<Link to={`regione/${props.region.node.slug}`}>Vedi Dettagli</Link>*/}
+          <Link to={`regione/${props.region.node.slug}`}>Vedi Dettagli</Link>
         </Card.Body>
       </Card>
     </Col>

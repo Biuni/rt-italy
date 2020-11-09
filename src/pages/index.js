@@ -78,7 +78,7 @@ export default () => (
     query={graphql`
       query AllValue {
         allRtCsv(
-          filter: { date: { gt: "2020-11-01" } }
+          filter: { date: { gt: "2020-11-08" } }
           sort: { fields: ML, order: DESC }
         ) {
           totalCount

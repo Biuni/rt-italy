@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Alert, Modal, Button } from "react-bootstrap"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons"
+import { faCalendarCheck, faExclamation } from "@fortawesome/free-solid-svg-icons"
 
 function Information(props) {
   const [show, setShow] = useState(false)
@@ -24,7 +24,7 @@ function Information(props) {
             variant="outline-info"
             size="sm"
           >
-            Torna alla homepage
+            <span style={{ padding: '3px 0', display: 'inline-block' }}>Torna alla homepage</span>
           </Button>
         </Link>
       )}
@@ -34,21 +34,30 @@ function Information(props) {
         size="sm"
         onClick={handleShow}
       >
-        Maggiori informazioni
+        <span style={{ marginTop: '3px', display: 'inline-block' }}>Maggiori informazioni</span>
+        <img alt="new" style={{ paddingLeft: '10px', marginTop: '-1px' }} src="/new.png" />
       </Button>
 
-      <Modal show={show} onHide={handleClose} className="ModalInformation">
+      <Modal show={show} onHide={handleClose} size="lg" className="ModalInformation">
         <Modal.Header closeButton>
           <Modal.Title>Maggiori informazioni</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <Alert variant={"warning"}>
+            <FontAwesomeIcon icon={faExclamation} />&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>Aggiornamento del 18 Gennaio 2021.</strong><br /><br />
+            I valori di R<sub>t</sub> presenti in questo sito web non sono
+            più calcolati a partire dai dati della Protezione Civile ma vengono
+            direttamente estratti dai report di monitoraggio settimanale
+            dell'Istituto Superiore di Sanità (ISS).
+          </Alert>
           <h3>Come leggere i dati</h3>
-          Lo scopo di questo progetto è quello di stimare l'attuale valore di R
-          <sub>t</sub> di ogni regione, attraverso un metodo statistico. A tal
-          proposito, oltre all'effettivo numero di riproduzione del virus, sono
-          considerati due intervalli di credibilità: uno del 50% ed uno del 90%.
-          Ad ognuno di questi intervalli è associato un valore massimo ed un
-          valore minimo. Nel grafico avremo quindi:
+          Lo scopo di questo progetto è quello di mostrare l'attuale valore di R
+          <sub>t</sub>, calcolato dall'ISS, per ogni regione e provincia autonoma
+          italiana. Le date fanno riferimento alla data di aggiornamento del report.
+          Oltre all'effettivo numero di riproduzione del virus, è
+          riportato anche l'intervallo di credibilità del 90%.
+          Nel grafico avremo quindi:
           <br />
           <ul>
             <li>
@@ -58,42 +67,39 @@ function Information(props) {
               : rappresentato dal puntino nero.
             </li>
             <li>
-              <strong>Intervallo del 50%</strong>: rappresentato dalla "candela"
-              che può essere verde, gialla o rossa. E' verde quando sia il
+              <strong>Intervallo del 90%</strong>: rappresentato dalla "candela"
+              che può essere verde, arancione o rossa. È verde quando sia il
               valore di R<sub>t</sub>, sia l'intervallo rientrano nella soglia
-              di 1. E' gialla quando il valore di R<sub>t</sub> è inferiore alla
-              soglia ma il punto di massimo dell'intervallo la supera. E' rossa
+              di 1. È arancione quando il valore di R<sub>t</sub> è inferiore alla
+              soglia ma il punto di massimo dell'intervallo la supera. È rossa
               quando sia il valore di R<sub>t</sub> che quello di massimo
               superano la soglia.
             </li>
-            <li>
-              <strong>Intervallo del 90%</strong>: rappresentato dalla riga
-              verticale celeste con ai capi due linee trasversali che
-              corrispondono ai valori di massimo e minimo dell'intervallo di
-              credibilità.
-            </li>
           </ul>
+          <strong><u>ATTENZIONE</u>:</strong> Il colore della "candela" non è in 
+          nessun modo associato con il meccanismo della colorazione delle regioni,
+          introdotto con il DPCM del 3 Novembre 2020.
+          <br /><br />
+
           <h3>Metodo utilizzato</h3>
-          Il valore dell'effettivo numero di riproduzione del virus (R
-          <sub>t</sub>) è calcolato tramite un metodo bayesiano proposto da{" "}
-          <strong>Kevin Systrom</strong>, co-founder ed ex CEO di Instagram, che
-          sfrutta l'incremento dei nuovi casi positivi. Per chi volesse
-          approfondire vi invito a leggere direttamente l'articolo pubblicato
-          nel suo{" "}
-          <a href="http://systrom.com/blog/the-metric-we-need-to-manage-covid-19/">
-            blog
-          </a>
-          . <br />
-          Per adattarlo ai dati italiani, come consigliato dall'
-          <strong>Istituto Superiore della Sanità</strong>, sono considerati i
-          casi negli ultimi 15 giorni invece che 7, come indicato da Systrom.
+          L'Istituto Superiore di Sanità stima il valore
+          di R<sub>t</sub> attraverso un metodo statistico introdotto  
+          da <a href="https://doi.org/10.1093/aje/kwt133">Cori et al</a>. Maggiori
+          informazioni sono riportate in <a href="https://bit.ly/35RmmN7">questa pagina</a> del
+          loro sito web.
+          <br /><br />
+
           <h3>Aggiornamento dei dati</h3>Il valore di R<sub>t</sub>{" "}
-          (ed i rispettivi intervalli di credibilità) sono aggiornati settimanalmente.
+          (ed i rispettivi intervalli di credibilità) sono aggiornati con cadenza settimanale
+          in concomintanza dell'uscita del report di monitoraggio dell'ISS. Per seguire
+          l'aggiornamento quotidiano di R<sub>t</sub>, calcolato con i dati della Protezione Civile,
+          è possibile visitare il sito <a href="https://covid19.infn.it/">CovidStat</a> dell'INFN.
+          <br /><br />
+
           <h3>Disclaimer</h3>
-          I dati presenti in questa pagina non sono consideraribili ufficiali in
-          quanto non rilasciati da nessun ente qualificato.
-          <br />
-          Questo sito web è ispirato a <a href="https://rt.live/">rt.live</a>.
+          I dati presenti in questa pagina sono consideraribili ufficiali in quanto
+          calcolati dall'Istituto Superiore di Sanità. Eventuali errori o incongurenze
+          sono riconducibili alla fase di estrapolazione dei dati.
         </Modal.Body>
         <Modal.Footer>
           <a href="https://github.com/Biuni/rt-italy/issues">

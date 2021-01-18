@@ -31,6 +31,7 @@ function RegionDetails(props) {
                 </span>
               </div>
             </ListGroupItem>
+            {/*
             <ListGroupItem className="CardInterval">
               Intervallo di credibilità del 50%
               <br />
@@ -49,8 +50,9 @@ function RegionDetails(props) {
                 </span>
               </div>
             </ListGroupItem>
+            */}
           </ListGroup>
-          <Link to={`regione/${props.region.node.slug}`}>Vedi Dettagli</Link>
+          <Link to={`regione/${props.region.node.slug}`}>Vedi Andamento</Link>
         </Card.Body>
       </Card>
     </Col>

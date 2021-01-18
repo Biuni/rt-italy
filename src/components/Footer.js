@@ -9,8 +9,7 @@ function Footer() {
       <FontAwesomeIcon icon={faBolt} color="#DAA520" />
       <br />
       <small>
-        Dati della{" "}
-        <a href="https://github.com/pcm-dpc/COVID-19">Protezione Civile</a>
+        Dati: <a href="https://www.iss.it/">Istituto Superiore di Sanità</a>
       </small>
       <div className="text-center mt-2">
         <a

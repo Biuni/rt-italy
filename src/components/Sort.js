@@ -19,13 +19,13 @@ function Sort(props) {
       >
         Max 90%
       </Button>
-      <Button
+      {/*<Button
         size="sm"
         variant="outline-info"
         onClick={() => props.sortData(props.values, "High_50", "desc")}
       >
         Max 50%
-      </Button>
+      </Button>*/}
       <Button
         size="sm"
         variant="outline-info"

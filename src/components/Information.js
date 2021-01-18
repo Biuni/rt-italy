@@ -3,6 +3,7 @@ import { Alert, Modal, Button } from "react-bootstrap"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarCheck, faExclamation } from "@fortawesome/free-solid-svg-icons"
+import newLogo from "../images/new.png"
 
 function Information(props) {
   const [show, setShow] = useState(false)
@@ -35,7 +36,7 @@ function Information(props) {
         onClick={handleShow}
       >
         <span style={{ marginTop: '3px', display: 'inline-block' }}>Maggiori informazioni</span>
-        <img alt="new" style={{ paddingLeft: '10px', marginTop: '-1px' }} src="/new.png" />
+        <img alt="new" style={{ paddingLeft: '10px', marginTop: '-1px' }} src={newLogo} />
       </Button>
 
       <Modal show={show} onHide={handleClose} size="lg" className="ModalInformation">

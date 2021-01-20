@@ -52,12 +52,26 @@ function Information(props) {
             direttamente estratti dai report di monitoraggio settimanale
             dell'Istituto Superiore di Sanità (ISS).
           </Alert>
+          <h3>Informazioni</h3>
+          I dati successivi al <strong>14 Ottobre 2020</strong> indicano
+          il valore puntuale di R<sub>t</sub> associato alla data in
+          cui sono stati calcolati. Queste stime derivano dai report utilizzati
+          dal Ministero della Salute per attuare le misure
+          restrittive sulla base delle colorazioni regionali e sono estratti dalla{" "}
+          <a href="https://github.com/opencovid-mr/Report_Integrali_ISS">repository</a>{" "}
+          Github di <a href="https://twitter.com/OpencovidM">@OpenCovidM</a>.<br />
+          I dati precedenti al <strong>14 Ottobre 2020</strong> indicano
+          il valore medio di R<sub>t</sub> calcolato nei 14 giorni antecedenti
+          alla data di pubblicazione del report. Le date associate a questi
+          valori rappresentano la data mediana nel range di riferimento.
+          Questi dati sono estratti dalla{" "}
+          <a href="https://bit.ly/35WluGO">repository</a>{" "}
+          di <a href="https://ondata.it/">onData</a>.
+          <br /><br />
+
           <h3>Come leggere i dati</h3>
-          Lo scopo di questo progetto è quello di mostrare l'attuale valore di R
-          <sub>t</sub>, calcolato dall'ISS, per ogni regione e provincia autonoma
-          italiana. Le date fanno riferimento alla data di aggiornamento del report.
           Oltre all'effettivo numero di riproduzione del virus, è
-          riportato anche l'intervallo di credibilità del 90%.
+          riportato anche l'intervallo di credibilità del 95%.
           Nel grafico avremo quindi:
           <br />
           <ul>
@@ -68,7 +82,7 @@ function Information(props) {
               : rappresentato dal puntino nero.
             </li>
             <li>
-              <strong>Intervallo del 90%</strong>: rappresentato dalla "candela"
+              <strong>Intervallo del 95%</strong>: rappresentato dalla "candela"
               che può essere verde, arancione o rossa. È verde quando sia il
               valore di R<sub>t</sub>, sia l'intervallo rientrano nella soglia
               di 1. È arancione quando il valore di R<sub>t</sub> è inferiore alla
@@ -87,7 +101,7 @@ function Information(props) {
           di R<sub>t</sub> attraverso un metodo statistico introdotto  
           da <a href="https://doi.org/10.1093/aje/kwt133">Cori et al</a>. Maggiori
           informazioni sono riportate in <a href="https://bit.ly/35RmmN7">questa pagina</a> del
-          loro sito web.
+          loro sito web e in questo <a href="https://bit.ly/2LJbs5c">articolo</a>.
           <br /><br />
 
           <h3>Aggiornamento dei dati</h3>Il valore di R<sub>t</sub>{" "}

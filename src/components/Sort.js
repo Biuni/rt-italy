@@ -17,7 +17,7 @@ function Sort(props) {
         variant="outline-info"
         onClick={() => props.sortData(props.values, "High_90", "desc")}
       >
-        Max 90%
+        Max 95%
       </Button>
       {/*<Button
         size="sm"

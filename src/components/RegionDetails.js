@@ -14,7 +14,7 @@ function RegionDetails(props) {
           </Card.Title>
           <ListGroup className="list-group-flush">
             <ListGroupItem className="CardInterval">
-              Intervallo di credibilità del 90%
+              Intervallo di credibilità del 95%
               <br />
               <div style={{ clear: "both" }}>
                 <span style={{ float: "left", textAlign: "left" }}>

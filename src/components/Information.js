@@ -15,8 +15,9 @@ function Information(props) {
     <div className="Information">
       {props.last !== "" ? (
         <Alert variant={"info"} className="AlertInformation">
-          Ultimo aggiornamento: <strong>{props.last}</strong>&nbsp;&nbsp;
-          <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" />
+          R<sub>t</sub> aggiornato al: <strong>{props.last}</strong>&nbsp;&nbsp;
+          <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" /><br />
+          <small>(estratto dal report ISS del <strong>22-01-2021</strong>)</small>
         </Alert>
       ) : (
         <Link to="/">

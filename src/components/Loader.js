@@ -7,7 +7,7 @@ function Loader() {
     <div className="AppLoader">
       <FontAwesomeIcon icon={faCog} size="3x" spin />
       <br />
-      Calcolo in corso...
+      Caricamento in corso...
     </div>
   )
 }

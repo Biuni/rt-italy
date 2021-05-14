@@ -17,7 +17,7 @@ function Information(props) {
         <Alert variant={"info"} className="AlertInformation">
           R<sub>t</sub> aggiornato al: <strong>{props.last}</strong>&nbsp;&nbsp;
           <FontAwesomeIcon icon={faCalendarCheck} color="#43a03d" /><br />
-          <small>(estratto dal report ISS del <strong>07-05-2021</strong>)</small>
+          <small>(estratto dal report ISS del <strong>14-05-2021</strong>)</small>
         </Alert>
       ) : (
         <Link to="/">
